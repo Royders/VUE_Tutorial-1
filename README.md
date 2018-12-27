@@ -28,8 +28,17 @@ Select ` default (babel, eslint) ` since the very project wont need any other fe
 ├── package.json
 └── vue.config.js
 ```
+### main.js
+```
 
+import Vue from 'vue'
+import App from './App'
 
+new Vue ({
+    // el: '#app',
+    render : h => h(App)
+}).$mount('#app')
+```
 # How to start the Project
 
 ## Development Build
