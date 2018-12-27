@@ -8,7 +8,7 @@ Run in command line
 ```
 vue create <projectname>
 ```
-Select ` default (babel, eslint) ` since the very project wont need any other features such as `vue router`
+Select ` default (babel, eslint) ` since this is the very first project, you wont need any other features such as `vue router`
 
 ## Structure of a vue file
 
@@ -83,7 +83,7 @@ new Vue ({
     render : h => h(App)
 }).$mount('#app')
 ```
-Inside the main.js file a new vue instance is being create. Since we want to render our Application, we are import it and mount it to the very root `<div>` which has the `id="app"` inside the `index.html` file.
+Inside the main.js file a new vue instance is being created. To render our Application, we are importing it and mount it to the very root `<div>` which has the `id="app"`inside the `index.html` file.
 
 Another way of rendering the Application:
 ```
@@ -94,6 +94,7 @@ new Vue ({
 ```
 
 ## Sending Data from a child component to a parent component
+
 Showing how the `Searchbar` component communicates with the App.vue component
 
 Two steps:
@@ -116,7 +117,7 @@ export default {
     }
 }
 ```
-We are using the html event handler `input`to emmit every keystroke to the parent component.
+We are using the html event handler `input`to emit every keystroke to the parent component.
 `@input="onInput"`is the short form for `v-on:input="onInput"`. Here we are telling vue to call the "onInput" method whenever a html input occurs.
 
 2. Insinde the parent component
