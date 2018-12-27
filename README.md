@@ -129,6 +129,34 @@ We are using the html event handler `input`to emmit every keystroke to the paren
 ```
 Import the child-component, add it to the components Object and create a listener to it. Again ` @termChange="onTermChange"`is the short form for ` v-on:termChange="onTermChange"`. The event the parent component is listening for must have the same name, as the emitting child component. In this case: `termChange`. 
 
+## Sending Data from a parent component to a child component
+
+In this case we are not emitting events, but passing props.
+Again two steps.
+
+1. Add the prop to the parent component's template with a v-bind expression
+2. Tell the child component about the props it should expect to get
+```
+<template>
+<div class = "container">
+   <VideoDetail  v-bind:video="selectedVideo"></VideoDetail>
+</div>
+</template>
+```
+Right here we are adding the selected Video to VideoDetail.
+
+Inside the Video-Detail component, we are adding the `props Object`to the `<script>` part.
+```
+<script>
+export default {
+    name: 'VideoDetail',
+    props:{
+        video: Object
+    }
+}
+</script>
+
+```
 # How to start the Project
 
 ## Development Build
