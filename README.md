@@ -10,14 +10,14 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Production Build
 ```
-npm run build
+docker build . -t <YOUR_IMAGE_NAME>
 ```
 
-### Run your tests
+### Run Production Build
 ```
-npm run test
+docker run -it -p 3000:80 <YOUR_IMAGE_NAME>
 ```
 
 ### Lints and fixes files
