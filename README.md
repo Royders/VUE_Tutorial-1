@@ -127,7 +127,7 @@ We are using the html event handler `input`to emmit every keystroke to the paren
 </div>
 </template>
 ```
-Import the child-component, add it to the components Object and create a listener to it. Again ` @termChange="onTermChange"`is the short form for ` v-on:termChange="onTermChange"`. The event the parent component is listening for must have the same name, as the emitting child component.
+Import the child-component, add it to the components Object and create a listener to it. Again ` @termChange="onTermChange"`is the short form for ` v-on:termChange="onTermChange"`. The event the parent component is listening for must have the same name, as the emitting child component. In this case: `termChange`. 
 
 # How to start the Project
 
