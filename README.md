@@ -1,3 +1,10 @@
+# Scope
+- Starting a Vue Project with Vue CLI 3
+- Understanding how to communicate between parent and children components
+- First touch with VUE Directives
+
+
+
 # How to start the Project
 
 ## Development Build
