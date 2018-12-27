@@ -93,7 +93,41 @@ new Vue ({
         }
 ```
 
+## Sending Data from a child component to a parent component
+Showing how the `Searchbar` component communicates with the App.vue component
 
+Two steps:
+
+1. Insinde the child component
+```
+<template>
+    <div>
+        <input @input="onInput" />
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'Searchbar',
+    methods: {
+        onInput: function (event)  {
+            this.$emit('termChange', event.target.value)
+        }    
+    }
+}
+```
+We are using the html event handler `input`to emmit every keystroke to the parent component.
+`@input="onInput"`is the short form for `v-on:input="onInput"`. Here we are telling vue to call the "onInput" method whenever a html input occurs.
+
+2. Insinde the parent component
+```
+<template>
+<div class = "container">
+   <Searchbar @termChange="onTermChange"> </Searchbar>
+</div>
+</template>
+```
+Import the child-component, add it to the components Object and create a listener to it. Again ` @termChange="onTermChange"`is the short form for ` v-on:termChange="onTermChange"`. The event the parent component is listening for must have the same name, as the emitting child component.
 
 # How to start the Project
 
