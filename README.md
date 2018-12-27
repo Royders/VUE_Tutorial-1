@@ -10,6 +10,51 @@ vue create <projectname>
 ```
 Select ` default (babel, eslint) ` since the very project wont need any other features such as `vue router`
 
+## Structure of a vue file
+
+```
+<template>
+Define your html in here
+</template
+
+<script>
+Import statements
+
+export default {
+    name: 'App',                    <-- A wise man told me nothing is more important than naming
+    components: {                   <-- List all the importent components
+        Searchbar,
+        VideoList,
+        VideoDetail
+    },
+    data (){                        <-- Data defines the initial state of the application 
+        return {
+            videos: [],
+            selectedVideo: null
+        }
+    },
+    methods: {                      <-- Define the way the different ways the state of your application can be changed
+        onVideoSelect(video){
+          this.selectedVideo = video
+        }
+    },
+    props:{                         <-- Data that is being send from a parent component to a child component
+        video: Object
+    },
+    computed:{                      <-- Define how to turn the current data into viewable values
+        videoUrl(){
+            const {videoId} = this.video.id
+            return `https://www.youtube.com/embed/${videoId}`
+        }
+    }
+}
+</script>
+
+<style scoped>
+Define your css styling in here (Use scoped so you don't apply the css styling to the whole project
+</style>
+```
+
 ## Projectstructure
 
 ```
