@@ -3,6 +3,12 @@
 - Understanding how to communicate between parent and children components
 - First touch with VUE Directives
 
+## Initialization of a vue project
+Run in command line
+```
+vue create <projectname
+```
+Select ` default (babel, eslint) ` since the very project wont need any other features such as `vue router`
 
 
 # How to start the Project
