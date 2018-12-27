@@ -6,9 +6,28 @@
 ## Initialization of a vue project
 Run in command line
 ```
-vue create <projectname
+vue create <projectname>
 ```
 Select ` default (babel, eslint) ` since the very project wont need any other features such as `vue router`
+
+## Projectstructure
+
+```
+├── index.html
+├── public
+│   └── favicon.ico
+│   └── index.html
+├── src
+│   └── APP.vue
+│   └── components
+│         └── Searchbar.vue
+│         └── VideoDetail.vue
+│         └── VideoList.vue
+│         └── VideoListItem.vue
+├── main.js
+├── package.json
+└── vue.config.js
+```
 
 
 # How to start the Project
