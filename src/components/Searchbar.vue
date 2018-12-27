@@ -9,8 +9,6 @@ export default {
     name: 'Searchbar',
     methods: {
         onInput: function (event)  {
-            //termChange is just a name
-            //$emit just to give the user of the framework the freedom to decale a own "emit" function
             this.$emit('termChange', event.target.value)
         }    
     }
